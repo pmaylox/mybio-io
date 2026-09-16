@@ -1,0 +1,159 @@
+/* ===== TRAINING NOTES =====
+   This CSS includes:
+   - A minimal base stylesheet for common elements
+   - No advanced selectors — only elements, classes, and IDs
+   Your HTML will "turn on" these styles by adding the right classes.
+*/
+
+/* ===== Base Reset & Typography ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: black;
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+}
+
+header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35;
+    background: linear-gradient(to right, white 0%, gold 50%, white 100%);
+     color: sienna;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1rem;
+}
+header .center{
+    text-align: center;
+    grid-column: 1 / -1;
+}
+.center {
+    background-color: transparent;
+    display: grid;
+    place-items: center;
+}
+
+.logo {
+    text-align: center;
+}
+nav {
+    text-align: center;
+}
+.actions {
+    text-align: right;
+}
+ .right {
+    background: linear-gradient(to right, gold, white);
+ }
+ .left {
+    background: linear-gradient(to left, gold, white);
+ }
+
+h1,
+h2 {
+    background-color: lightblue;
+    color: blueviolet;
+    text-decoration: wavy;
+}
+h3 {
+    margin-top: 0;
+}
+
+main p {
+    margin-bottom: 1em;
+    color: blue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+main {
+    flex: 1;
+}
+section {
+    background-color: lightgoldenrodyellow;
+    color:darkturquoise;
+    font-size: 12px;
+    font-family:fantasy;
+    padding: 1rem;
+}
+
+.sources li {
+    margin-bottom: 0.5rem;
+}
+
+.sources a {
+    color: #0055aa;
+}
+
+.sources a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    background-color: white;
+    color: #405d27;
+    margin-top: auto;
+}
+
+a {
+    color: #0055aa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Layout Helpers ===== */
+.page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+
+/* ===== Bio Section ===== */
+.bio {
+    background-color: lightgray;
+    color: blue;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.bio img {
+    max-width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+/* ===== Posts Section ===== */
+.posts {
+    display: grid;
+    gap: 1rem;
+}
+
+.post-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+}
+.box {
+    border: 2px solid black;
+    padding: 1rem;
+    background-color: white;
+    width: 250px;
+}
