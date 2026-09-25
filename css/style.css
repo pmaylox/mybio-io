@@ -457,9 +457,10 @@ a:hover {
     background-size: contain;
 }
 
-.sprite-like-contact::before {
-    background-image: ("../images/envelope.png");
+.sprite-link.envelope::before {
+    background-image: url("../images/envelope.png");
 }
+
 .sprite-link.home::before {
     background-image: url("../images/house.png");
 }
