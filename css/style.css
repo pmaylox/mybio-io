@@ -457,6 +457,9 @@ a:hover {
     background-size: contain;
 }
 
+.sprite-like-contact::before {
+    background-image: ("../images/envelope.png");
+}
 .sprite-link.home::before {
     background-image: url("../images/house.png");
 }
@@ -488,6 +491,14 @@ a:hover {
 .sprite-link.kaitlynn::before,
 .sprite-link-kaitlynn::before {
     background-image: url("../images/kaitlynn.png");
+}
+.sprite-envelope {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    display: inline-block;
+    background: url('../images/sprite.png') 0 0; 
 }
 
 .sprite-kaitlynn {
