@@ -238,20 +238,29 @@ div.the-childR {
 .hero {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
-  width: min(900px, calc(100% - 30px));
+  width: max-content;
+  min-width: 100%;
   margin: 0 auto;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  animation: driveAcross 8s linear infinite;
 }
 
 .car-image {
-  width: 120px;
-  height: auto;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
   flex-shrink: 0;
+  display: block;
 }
 
 .hero p {
   margin: 0;
-  text-align: left;
+  text-align: center;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 /* begin footer */
@@ -564,32 +573,11 @@ a:hover {
   0%, 100% { color: black; }
   50% { color: red; }
 }
-.slide-text {
-    animation: slideAcross 5s ease-in-out forwards;
-}
-
-@keyframes slideAcross {
-    from {
-        transform: translateX(-200px);
-    }
-    to {
-        transform: translateX(100vw);
-    }
-}
-.slide-text {
-    animation: slideAcross 6s linear infinite;
-}
-
-@keyframes slideAcross {
+@keyframes driveAcross {
     0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
+        transform: translateX(-20%);
     }
     100% {
-        transform: translateX(100vw);
-        opacity: 1;
+        transform: translateX(100%);
     }
 }
