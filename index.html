@@ -1,54 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  </head>
-    <title>My bio page</title>
-    <!-- Link to an external CSS stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<!--Javascript-->
+<meta http-equiv="X-UA-Compatible" content="ie-edge">
+<!-- PyScript CSS CDN -->
+<link rel="stylesheet" href="https://pyscript.net">
+<!-- PyScript JavaScript Script Tag -->
+<script type="module" src="https://pyscript.net"></script>
+<!--bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<title>Phil's Page</title>
 </head>
-<body>
-
-    <header> 
-        <h1 class="center">Buckle up Buttercup</h1>
-
-    </header>
-    <main role="main">
-        <div class="bio">
-            <div class="bio img">
-                <img src="images/me.jpg" alt="look world it's me">
-                You should be scared looking at this.
-            </div>
+<body class="home-page">
+<style>
+    body.home-page {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "header header header"
+            "left middle right"
+            "bottom bottom bottom";
+    }
+</style>
+<header class="site-header">
+    <div class="title-row">
+        <div class="title-left">
+            <img src="images/miniMe.png" alt="miniMe" class="mini-title">
         </div>
-        <Section>
-            <p>To borrow from my favorite book, The Hitchhiker's Guide to the Galaxy.</p>
-            <p> The most famous alcoholic drink in The Hitchhiker’s Guide to the Galaxy is the Pan Galactic Gargle Blaster, invented by Zaphod Beeblebrox. [1]  
-The Pan Galactic Gargle Blaster 
+        <h1 id="grad">Welcome to my page</h1>
+        <div class="title-right">
+            <img src="images/miniMe.png" alt="miniMe" class="mini-title">
+        </div>
+    </div>
 
-• The Effect: Drinking one is like "having your brains smashed out by a slice of lemon wrapped round a large gold brick". 
-• The Dosage: The Guide notes that the maximum safe dosage is two, and consuming three will completely reconstruct your molecular structure. 
-• Fictional Ingredients: It uses Ol' Janx Spirit, Santraginus V seawater, Arcturan Mega-gin, Fallian marsh gas, Qualactin Hypermint extract, an Algolian Suntiger tooth, Zamphuor, and an olive. [1]  
+    <div class="header-grid">
+        <nav class="main-nav">
+            <ul>
+                <li class="active"><a href="index.html" class="sprite-link home"><span>Home</span></a></li>
+                <li><a href="about.html" class="sprite-link me"><span>About Me</span></a></li>
+                <li><a href="grandkids.html" class="sprite-link kaitlynn"><span>Grandkiddos</span></a></li>
+                <li><a href="cooking.html" class="sprite-link cooking"><span>Food I like</span></a></li>
+                <li><a href="music.html" class="sprite-link music"><span>Music I like</span></a></li>
+                <li><a href="dogs.html" class="sprite-link dogs"><span>My dog children</span></a></li>
+                <li><a href="cats.html" class="sprite-link cats"><span>My kitty children</span></a></li>
+                <li><a href="chicken.html" class="sprite-link chicken"><span>Crazy Chicken</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-Real-World Equivalents 
-Bartenders and fans have tried to recreate the drink using terrestrial ingredients like navy strength gin, vodka, and a splash of mint or citrus. You can check out a detailed terrestrial breakdown on Cocktail Chemistry. [1, 3, 4, 5]  
-Would you like to know a real-world recipe to make a Pan Galactic Gargle Blaster at home, or do you want more details about other alien drinks from Douglas Adams' universe (like That Old Janx Spirit)? 
-AI responses may include mistakes.</p>
-</Section>
-<section class="sources">
-    <h2>Sources</h2>
-    <ol>
-        <li><a href="https://hitchhikers.fandom.com/wiki/Pan_Galactic_Gargle_Blaster">Hitchhiker's Guide Wiki</a></li>
-        <li><a href="https://www.facebook.com/EatOrWeBothStarve/videos/the-hitchhikers-guide-to-the-galaxy-also-mentions-alcohol-it-says-that-the-best-/347175623977778/">Facebook video</a></li>
-        <li><a href="https://www.cocktailchemistrylab.com/home/pan-galactic-gargle-blaster">Cocktail Chemistry</a></li>
-        <li><a href="https://www.youtube.com/watch?v=eqYJ5h1fPMo">YouTube video</a></li>
-        <li><a href="http://www.geekychef.com/2009/01/pan-galactic-gargle-blaster.html">Geeky Chef</a></li>
-    </ol>
+   <div id="content"></div>
+   <h4 style="color: whitesmoke; text-align: center;">Welcome to my page. It is a page about me and what makes me happy.</h4>
+<main>
+        <div class="the-parentL">
+          What you will find will be an <em>eclectic</em> array of what make me happy
+        
+                <div class="the-childL">
+                        <p>you will get a brief history of what makes me</p>
+                        <p style="font-family: Verdana; font-size: 24px; font-weight: bold;">...well me</p>
+                 </div>
+        </div>
+        <div class="middle-box" style="display: flex; justify-content: flex-start; align-items: center; width: calc(100% - 10px); height: calc(100% - 10px);">
+                <img src="images/Frazzled_Chicken.gif" alt="running chicken" style="width: 20%; height: auto; display: block; margin: 0;">
+        </div>
+        <div class="the-parentR">
+                <p>Here and my topics of choice</p>
+                <p> you can <strong>choose:</strong></p>
+                <div class="the-childR">
+                        
+                        <p>About me, can learn a tidbit of me grandkids, what turns me on in the kitchen, <br>
+                        what I have listened to musically through my life, All my furr children,<br> 
+                        Those silly chickens</p>
+                       
+                </div>
+        </div>
+</main>
+<section>
+    <p style="font-family:lucida sans;text-align: center; color:crimson; font-size: 1.5rem;">Buckle up and enjoy the ride</p>
 </section>
-    </main>
-    <footer>
-      <p>&copy; 2026 Phil M all rights reserved</p>
-    </footer>
 </body>
+<footer id="top-ad">
+        <p>&copy; &&date+%Y() <strong>Phil M</strong>, <em>All rights reserved</em></p>
+</footer>
 </html>
