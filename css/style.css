@@ -298,11 +298,30 @@ img {
     height: auto;
 }
 
+.card-img-top {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid brown;
+}
+
 section {
     display: flex;
+    justify-content: center;
     align-items: flex-start;
     gap: 1.25rem;
-    
+}
+.card {
+    margin: 0 auto;
+    width: fit-content;
+}
+.card-title {
+    border: 2px solid chocolate;
+    padding: 6px 10px;
+    display: inline-block;
+    text-align: center;
 }
 
 .phil-photo {

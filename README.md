@@ -9,6 +9,7 @@ To begin:
 1.Index.html
     - Animation
     - Sprites
+    - Made sprites into hyperlinks
     - gradients
     - Special characters
     - Bulleted list
@@ -17,13 +18,15 @@ To begin:
     - IMG
     - HTML structure
     - loaded bootstrap, javascript and python (to be used later)
-    - loaded css
+    - wrote a lot of css
     - Header
 
 
 2. About.html
-    -  <Blockquote>
-    - <cite>
+    - Blockquote
+    - Cite
     - Much of the above
+    - Card in Bootstrap
+    -border around the card using css
 
 3. Wrote a css page named style.css
