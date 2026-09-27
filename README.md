@@ -16,3 +16,14 @@ To begin:
     - SRC
     - IMG
     - HTML structure
+    - loaded bootstrap, javascript and python (to be used later)
+    - loaded css
+    - Header
+
+
+2. About.html
+    -  <Blockquote>
+    - <cite>
+    - Much of the above
+
+3. Wrote a css page named style.css
