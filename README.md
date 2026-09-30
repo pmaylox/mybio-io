@@ -30,3 +30,5 @@ To begin:
     -border around the card using css
 
 3. Wrote a css page named style.css
+
+4. Got rid of a lot of the overall site, for now, for re-evaluation
