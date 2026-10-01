@@ -5,16 +5,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--Javascript-->
-<meta http-equiv="X-UA-Compatible" content="ie-edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- PyScript CSS CDN -->
- <link rel="stylesheet" href="https://pyscript.net">
 <!-- PyScript JavaScript Script Tag -->
- <script type="module" src="https://pyscript.net"></script>
 <!--bootstrap -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
 
 <title>Phil's Page</title>
+ </head>
+<body class="about-page">
 <header class="site-header">
     <div class="title-row">
         <div class="title-left">
@@ -35,9 +35,6 @@
     </div>
 </header>
 
-</head>
-<div id="content"></div>
-<body class="about-page">
      <main>
         <header class="about-hero">
             <p class="eyebrow">About</p>
@@ -59,7 +56,7 @@
         </p>
 
         <section class="bio-section">
-            <img src="images/anniverary%202026.jpg" alt="phil pic" class="phil-photo">
+            <img src="images/anniversary-2026.jpg" alt="Phil and his wife celebrating their anniversary" class="phil-photo">
             <p class="bio-copy">
                 I was born in Mesa, Arizona, and grew up moving from place to place as a military brat. My 
                 early years took me through Panama City, Florida; New Portsmouth, New Hampshire; Plattsburg, 
@@ -73,20 +70,21 @@
                  Place, and although she was not visiting, the food was wonderful and the evening 
                  was memorable.
             </p>
-        </section>
-        <img src="slideshow/images/PSAB.png.jpg" alt="PSAB image">
-        <p>Here is an array of pictures from my stay at Prince Sultan Air Base (PSAB).</p>
+            </section>
+            <section>
+                <p>Here is an array of pictures from my stay at Prince Sultan Air Base (PSAB).</p>
+            </section>
 
     </main>
     <section> 
-        <div id="featured-blends" class="carousel slide" data-ride="carousel">
+        <div id="featured-blends" class="carousel slide" data-ride="carousel" data-interval="4000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="images/slideshow/PSAB.png.jpg" class="d-block w-100" alt="PSAB image">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/slideshow/BFG.png.jpg" class="d-block w-100" alt="BFG image">
-                </div>>
+                    <img src="images/slideshow/BFG.png" class="d-block w-100" alt="BFG image">
+                </div>
                 <div class="carousel-item">
                     <img src="images/slideshow/fastfood.png" class="d-block w-100" alt="fast food">
                 </div>
@@ -121,7 +119,6 @@
         </div>
     </section>
     
-</body>
 <footer id="top-ad">
     <ol>
     <li id="fn1">
@@ -129,8 +126,13 @@
       <a href="#ref1" title="Hitchhikers Guide to the Galaxy">https://www.voiceactorwebsites.com/hitchhikers-guide-to-the-galaxy-intro/</a>
     </li>
   </ol>
-        <script>
-    // Automatically inject the current 4-digit year into the span element
+    <p>&copy; <span id="copyright-year"></span> <strong>Phil M</strong>, <em>All rights reserved</em></p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
 </script>
+</body>
 </html>
