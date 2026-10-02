@@ -82,6 +82,10 @@ body {
     background-color: tan;
     color: #333;
 }
+body.home-page,
+body.about-page {
+    background-color: tan;
+}
 body.about-page main {
     display: block;
     width: 100%;
