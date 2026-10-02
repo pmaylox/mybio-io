@@ -32,10 +32,26 @@
         </nav>
     </div>
 </header>
-<main class="construction-notice" aria-label="Contact page status">
-    <p class="flash">Sorry, this page is currently under construction. Please check back later for contact
-        information.</p>
-</main>
+<main>
+<form action="/submit-form-endpoint" method="POST">
+    <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="firstName" required>
+    </div>
+
+    <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="lastName" required>
+    </div>
+
+    <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments" required></textarea>
+    </div>
+
+    <button type="submit" class="image-btn">SUBMIT</button>
+</form>
+</main> 
 </body>
 <footer id="top-ad">
     <p>&copy; <span id="copyright-year"></span> <strong>Phil M</strong>, <em>All rights reserved</em></p>
