@@ -148,6 +148,17 @@ main {
     align-items: start;
 }
 
+body.home-page main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body.home-page .the-parentL {
+    justify-self: start;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
 
 h1,
@@ -381,6 +392,12 @@ section {
     height: 100%;
     object-fit: contain;
     margin: 0 auto;
+}
+
+#featured-blends .carousel-item img.carousel-image-half {
+    width: 50%;
+    max-width: 350px;
+    height: auto;
 }
 
 @media (max-width: 600px) {
