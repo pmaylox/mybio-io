@@ -51,6 +51,9 @@
 
     <button type="submit" class="image-btn">SUBMIT</button>
 </form>
+<div id="submit-response" aria-live="polite">
+    <img src="images/mr.bean.gif" alt="Mr. Bean" hidden>
+</div>
 </main> 
 </body>
 <footer id="top-ad">
@@ -65,5 +68,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script>
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    document.querySelector('.contact-page form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        document.querySelector('#submit-response img').hidden = false;
+    });
 </script>
 </html>

@@ -43,9 +43,9 @@
             <p class="eyebrow">About</p>
             <h2>Welcome to my story</h2>
         </header>
-
-        <p class="lead-intro">
-           <blockquote><q><cite>Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of 
+        <main>
+        <p class="lead-intro" style="font-family: 'Arial Narrow', Arial, sans-serif;">
+           <blockquote class="intro-quote"><q><cite>Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of 
             the Galaxy lies a small unregarded yellow sun. Orbiting this at a distance of roughly 
             ninety-two million miles is an utterly insignificant little blue-green planet whose 
             ape-descended life forms are so amazingly primitive that they still think digital watches are 
@@ -57,7 +57,7 @@
             built a life grounded in service, curiosity, and resilience. My journey has taken me across 
             the country and around the world, and each chapter has shaped the perspective I bring to today.
         </p>
-
+        </main>
         <section class="bio-section">
             <img src="images/anniversary-2026.jpg" alt="Phil and his wife celebrating their anniversary" class="phil-photo">
             <p class="bio-copy">
@@ -155,6 +155,11 @@
     </section>
     
 <footer id="top-ad">
+    <section class="time-panel" aria-label="Current time and midnight countdown">
+        <p>Current time CST (GMT-5): <time id="gmt-minus-five-clock">--:--:--</time></p>
+        <p>Saudi time (AST): <time id="saudi-clock">--:--:--</time></p>
+        <p>Time until midnight: <time id="midnight-countdown">--:--:--</time></p>
+    </section>
     <ol>
     <li id="fn1">
       
@@ -172,6 +177,44 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script>
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    const gmtMinusFiveOffset = 5 * 60 * 60 * 1000;
+    const dayLength = 24 * 60 * 60 * 1000;
+    const clockElement = document.getElementById('gmt-minus-five-clock');
+    const saudiClockElement = document.getElementById('saudi-clock');
+    const countdownElement = document.getElementById('midnight-countdown');
+    const saudiTimeFormatter = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Asia/Riyadh',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hourCycle: 'h23'
+    });
+
+    function updateTimeDisplay() {
+        const now = new Date();
+        const gmtMinusFiveNow = new Date(now.getTime() - gmtMinusFiveOffset);
+        const pad = value => String(value).padStart(2, '0');
+        const hours = gmtMinusFiveNow.getUTCHours();
+        const minutes = gmtMinusFiveNow.getUTCMinutes();
+        const seconds = gmtMinusFiveNow.getUTCSeconds();
+        const millisecondsSinceMidnight =
+            ((hours * 60 + minutes) * 60 + seconds) * 1000 +
+            gmtMinusFiveNow.getUTCMilliseconds();
+        const secondsUntilMidnight = Math.ceil(
+            (dayLength - millisecondsSinceMidnight) / 1000
+        );
+
+        clockElement.textContent = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+        saudiClockElement.textContent = saudiTimeFormatter.format(now);
+        countdownElement.textContent =
+            `${pad(Math.floor(secondsUntilMidnight / 3600))}:` +
+            `${pad(Math.floor((secondsUntilMidnight % 3600) / 60))}:` +
+            `${pad(secondsUntilMidnight % 60)}`;
+    }
+
+    updateTimeDisplay();
+    setInterval(updateTimeDisplay, 1000);
 </script>
 </body>
 </html>

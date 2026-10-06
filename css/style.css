@@ -101,6 +101,19 @@ body.about-page main {
     padding: 20px 0;
 }
 
+body.about-page footer .time-panel {
+    width: min(100% - 30px, 600px);
+    margin: 0 auto 4px;
+    padding: 0;
+    text-align: center;
+}
+
+body.about-page footer .time-panel p {
+    display: inline;
+    margin: 0 8px;
+    font-variant-numeric: tabular-nums;
+}
+
 body.about-page section {
     overflow: hidden;
 }
@@ -176,6 +189,7 @@ main {
     grid-column: 1 / -1;
     width: 100%;
     align-items: start;
+    text-indent: 20px;
 }
 
 body.home-page main {
@@ -189,6 +203,9 @@ body.home-page .the-parentL {
     margin-right: 0;
 }
 
+.intro-quote {
+    margin-inline: 2rem; /* left and right */
+}
 
 
 h1,
@@ -333,7 +350,8 @@ footer {
         chocolate 100%
     );
     color: #fff;
-    height: 100px;
+    min-height: 100px;
+    height: auto;
     width: min(700px, calc(100% - 30px));
     margin: 0 auto;
     padding: 10px 20px;
